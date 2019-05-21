@@ -1,0 +1,927 @@
+@import "common.scss";
+
+body,html,.wrap,.page{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+
+// //音频样式
+// .music_icon{
+// 	position: fixed;
+// 	width: 1.8rem;
+// 	height: 1.8rem;
+// 	background:url(http://res.xhangjia.com.com/earth_music_icon.png) no-repeat;
+// 	background-size:1.8rem 3.6rem;
+// 	right: 0.5rem;
+// 	top:0.5rem;
+// 	z-index: 998;
+// }
+
+// .music_icon.mute{
+// 	background-position:left bottom;
+// }
+
+.music{
+	z-index: 997;
+	@include Offset(null,14,null,50,50);
+	right: 0.325rem;
+	.music-on{
+		@include Offset(music-on,null,null,50,50);
+	}
+	.music-off{
+		@include Offset(music-off,null,null,50,50);
+	}
+	.music-none{
+		display: none;
+	}
+}
+.mute{
+	-webkit-animation:none!important; 
+}
+
+.page{
+	overflow: hidden;
+	position:absolute;
+	left: 0;
+	top:0;
+	bottom: 0;
+	right: 0;
+}
+
+.pageinner{
+	@include Center(null,null,750,1206);
+	top: 50%;
+	margin-top: -15.1rem;
+	
+}
+.loading{
+	background-color: #262c4c;
+	z-index: 998;
+	@include Middle(loading,750,1809);
+	.loading-icon{
+		@include Center(loading-icon,590,210,80);
+		// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/loading-icon.png);
+		width: 105px!important;
+		height: 40px!important;
+		margin-left: -54px!important;
+		background-size: 630px 40px;
+		animation: loading steps(6) 2.4s infinite;
+	}
+	.loading-text{
+		font-weight: bold;
+		text-align: center;
+		font-size: 15px;
+		color: #f9f3e7;
+		@include Offset(null,704,null,750,20);
+	}
+}
+
+.page1{
+	background-color: #2f3658;
+	@include Middle(background,750,1809);
+	.balloon{
+		@include Offset(null,105,108,313,1100);
+		.balloon-purple{
+			animation: pulse 1.5s linear infinite;
+			@include Offset(balloon-purple,null,86,93,550);
+		}
+		.balloon-purple2{
+			animation: pulse 1.5s linear infinite;
+			@include Offset(balloon-purple,203,220,93,550);
+		}
+		.balloon-blue{
+			animation: pulse 1.6s linear infinite;
+			@include Offset(balloon-blue,100,null,115,444);
+		}
+		.balloon-orange{
+			animation: pulse 1.7s linear infinite;
+			@include Offset(balloon-orange,210,28,115,394);
+		}
+	}
+	.people{
+		@include Offset(null,462,40,374,653);
+		z-index: 3;
+		.people-EAT{
+			@include Offset(people-EAT,null,null,177,505);
+		}
+		.people-red{
+			@include Offset(people-red,142,86,288,511);
+		}
+	}
+	.machine-box{
+		@include Offset(null,-58,187,664,1159);
+		right: 0;
+		.machine{
+			@include Offset(machine,0,0,664,1159);
+		}
+		.light{
+			animation: flash 2.5s linear infinite;
+			@include Offset(light,103,70,493,394);
+		}
+		.arrow{
+			animation: fadeShine 0.3s both infinite alternate;
+			@include Offset(arrow,686,142,155,132);
+		}
+		.rocker{
+			@include Offset(rocker,785,197,120,120);
+			background-size: 18.0rem 3.0rem;
+		}
+		.rocker-animation{
+			animation: rocker steps(1) 0.2s;
+			animation-fill-mode: forwards;
+		}
+	}
+	.cat{
+		z-index: 3;
+		@include Offset(cat,1024,392,106,93);
+	}
+	.tip{
+		animation: pulse 1.2s linear infinite;
+		z-index: 5;
+		@include Offset(tip,815,206,383,77);
+	}
+}
+
+.page2{
+	background-color: #d584a4;
+	@include Middle(p2-background,750,1809);
+	.p2-tip{
+		animation: pulse 1.2s linear infinite;
+		@include Center(p2-tip1,156,532,54);
+	}
+	.p2-tableware{
+		@include Offset(null,252,null,750,97);
+		ul{
+			@include Center(null,null,405,97);
+			margin-left: -6rem;
+		}
+		li{
+			float: left;
+			.p2-tableware-inner{
+				transition:transform 0.5s ease;
+			}
+		}
+		.p2-tableware-ceramics{
+			animation: bounceInDown 1s both .3s;
+			@include Offset(null,null,null,96,97);
+			.p2-tableware-inner{
+				@include Offset(p2-tableware-ceramics1,null,null,96,97);
+			}
+			
+		}
+		.p2-tableware-silver{
+			animation: bounceInDown 1s both .6s;
+			@include Offset(null,null,155,96,97);
+			.p2-tableware-inner{
+				@include Offset(p2-tableware-silver1,null,null,96,97);
+			}
+		}
+		.p2-tableware-wood{
+			animation: bounceInDown 1s both .9s;
+			@include Offset(null,null,310,96,97);
+			.p2-tableware-inner{
+				@include Offset(p2-tableware-wood1,null,null,96,97);
+			}
+		}
+		.p2-tableware-animation{
+			animation: scale 0.4s ease-in-out;
+			animation-fill-mode: forwards;
+		}
+	}
+	.p2-food-box{
+		@include Offset(null,386,90,515,530);
+		ul{
+			@include Offset(null,null,null,515,530);
+			li{
+				z-index: 88;
+				@include Offset(null,null,16,485,118);
+				position: relative;
+				margin-top: 0.3rem;
+				display: none;
+				-webkit-animation: bounceInLeft .5s both linear;
+				animation: bounceInLeft .5s both linear;
+			}
+			.food-list-inner{
+				display: flex;
+    			justify-content: space-between;
+			}
+			.food-icon{
+				// @include Offset(null,null,null,116,118);
+				    width: 2.9rem;
+				    height: 2.95rem;
+				    background-size: 100%;
+				    background-repeat: no-repeat;
+				    display: inline-block;
+				    img{
+				    	width: 100%;
+				    }
+			}
+			.food-listbg{
+				// @include Offset(null,null,135,350,118);
+			    width: 8.75rem;
+			    height: 2.9rem;
+			    background-size: 100%;
+			    background-repeat: no-repeat;
+				background-color: #c7f5ff;
+				display: inline-block;
+				.food-name{
+					// position: absolute;
+					left: 0.675rem;
+					top: 0.6rem;
+					color: #3c626d;
+					font-size: 14px;
+					font-weight: bold;
+					margin-left: 0.75rem;
+					margin-top: 0.675rem;
+				}
+				.food-logo{
+					// @include Offset(null,59,42,97,60);
+				    width: 2.425rem;
+				    height: 1.5rem;
+				    background-size: 100%;
+				    background-repeat: no-repeat;
+				    display: inline-block;
+				    margin-left: 0.8rem;
+				    margin-top: 0.25rem;
+				}
+				.selection-box{
+					@include Offset(null,39,445,25,25);
+					background-color: #8aeaff;
+					.selected{
+						display: none;
+						@include Offset(p2-selected,-10,null,26,30);
+					}
+				}
+			}
+			.food-s-hhj{
+				// display: none;
+				z-index: 27;
+				// animation: bounceInLeft .5s both;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-s-hhj.png);
+				}
+				.food-logo{
+					background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-mzdp.png);
+				}
+			}
+			.food-s-hjbc{
+				// display: none;
+				z-index: 26;
+				// animation: bounceInLeft .5s both;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-s-hjbc.png);
+				}
+				.food-logo{
+					background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-hjyy.png);
+					width: 3rem;
+					// top: 1.6rem;
+					// left: 0.75rem;
+					margin-top: 0.3rem;
+				}
+			}
+			.food-s-hslxr{
+				// display: none;
+				z-index: 25;
+				// animation: bounceInLeft .5s both;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-s-hslxr.png);
+				}
+				.food-logo{
+					background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-xng.png);
+				}
+			}
+			.food-s-jzym{
+				// display: none;
+				z-index: 24;
+				// animation: bounceInLeft .5s boths;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-s-jzym.png);
+				}
+				.food-logo{
+					background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-xb.png);
+					width: 1.1rem;
+					height: 1.1rem;
+				}
+			}
+			.food-s-qtdth{
+				// display: none;
+				z-index: 23;
+				// animation: bounceInLeft .5s both;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-s-qtdth.png);
+				}
+				.food-logo{
+					background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-jtwe.png);
+				}
+			}
+			.food-s-sfjzs{
+				// display: none;
+				z-index: 22;
+				// animation: bounceInLeft .5s both;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-s-sfjzs.png);
+				}
+				.food-logo{
+					background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-hsz.png);
+					width: 1.2rem;
+					height: 1.2rem;
+				}
+			}
+			.food-s-tgjjrg{
+				// display: none;
+				z-index: 21;
+				// animation: bounceInLeft .5s both;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-s-tgjjrg.png);
+				}
+				.food-logo{
+					background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-tg.png);
+					width: 2rem;
+				}
+			}
+			.food-s-wsgyt{
+				// display: none;
+				z-index: 20;
+				// animation: bounceInLeft .5s boths;;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-s-wsgyt.png);
+				}
+				.food-logo{
+					background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-wsg.png);
+					width: 1.8rem;
+				}
+			}
+			.food-s-xbmhlm{
+				// display: none;
+				z-index: 19;
+				// animation: bounceInLeft .5s both;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-s-xbmhlm.png);
+				}
+				.food-logo{
+					background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-xbmh.png);
+					top: 1.65rem;
+				}
+			}
+			.food-s-xhky{
+				// display: none;
+				z-index: 18;
+				// animation: bounceInLeft .5s both;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-s-xhky.png);
+				}
+				.food-logo{
+					background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-xh.png);
+					width: 1.4rem;
+					height: 1.3rem;
+					margin-top: 0.15rem;
+				}
+			}
+			.food-s-ymdg{
+				// display: none;
+				z-index: 17;
+				// animation: bounceInLeft .5s both;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-s-ymdg.png);
+				}
+				.food-logo{
+					background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-cova.png);
+					width: 1.2rem;
+					height: 1.2rem;
+					top: 1.65rem;
+				}
+			}
+			.food-cf{
+				// display: none;
+				z-index: 16;
+				// animation: bounceInLeft .5s boths;;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-cf.png);
+				}
+				.food-logo{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-wsg.png);
+				}
+			}
+			.food-chf{
+				// display: none;
+				z-index: 15;
+				// animation: bounceInLeft .5s both;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-chf.png);
+				}
+				.food-logo{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-xbmh.png);
+				}
+			}
+			.food-gqmx{
+				// display: none;
+				z-index: 14;
+				// animation: bounceInLeft .5s both;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-gqmx.png);
+				}
+				.food-logo{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-tg.png);
+				}
+			}
+			.food-hmj{
+				// display: none;
+				z-index: 13;
+				// animation: bounceInLeft .5s both;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-hmj.png);
+				}
+				.food-logo{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-jtwe.png);
+				}
+			}
+			.food-kc{
+				// display: none;
+				z-index: 12;
+				// animation: bounceInLeft .5s boths;;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-kc.png);
+				}
+				.food-logo{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-wsg.png);
+				}
+			}
+			.food-klm{
+				// display: none;
+				z-index: 11;
+				// animation: bounceInLeft .5s both;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-klm.png);
+				}
+				.food-logo{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-xbmh.png);
+				}
+			}
+			.food-krbf{
+				// display: none;
+				z-index: 10;
+				// animation: bounceInLeft .5s both;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-krbf.png);
+				}
+				.food-logo{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-tg.png);
+				}
+			}
+			.food-lp{
+				// display: none;
+				z-index: 9;
+				// animation: bounceInLeft .5s both;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-lp.png);
+				}
+				.food-logo{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-jtwe.png);
+				}
+			}
+			.food-rgm{
+				// display: none;
+				z-index: 8;
+				// animation: bounceInLeft .5s boths;;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-rgm.png);
+				}
+				.food-logo{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-wsg.png);
+				}
+			}
+			.food-rjm{
+				// display: none;
+				z-index: 7;
+				// animation: bounceInLeft .5s both;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-rjm.png);
+				}
+				.food-logo{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-xbmh.png);
+				}
+			}
+			.food-sjb{
+				// display: none;
+				z-index: 6;
+				// animation: bounceInLeft .5s both;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-sjb.png);
+				}
+				.food-logo{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-tg.png);
+				}
+			}
+			.food-slf{
+				// display: none;
+				z-index: 5;
+				// animation: bounceInLeft .5s both;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-slf.png);
+				}
+				.food-logo{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-jtwe.png);
+				}
+			}
+			.food-szb{
+				// display: none;
+				z-index: 4;
+				// animation: bounceInLeft .5s boths;;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-szb.png);
+				}
+				.food-logo{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-wsg.png);
+				}
+			}
+			.food-yxfs{
+				// display: none;
+				z-index: 3;
+				// animation: bounceInLeft .5s both;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-yxfs.png);
+				}
+				.food-logo{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-xbmh.png);
+				}
+			}
+			.food-zcbf{
+				// display: none;
+				z-index: 2;
+				// animation: bounceInLeft .5s both;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-zcbf.png);
+				}
+				.food-logo{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-tg.png);
+				}
+			}
+			.food-zjp{
+				// display: none;
+				z-index: 1;
+				// animation: bounceInLeft .5s both;
+				.food-icon{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/food-zjp.png);
+				}
+				.food-logo{
+					// background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/logo-jtwe.png);
+				}
+			}
+		}
+	}
+	.p2-rocker-box{
+		@include Offset(null,603,636,87,319);
+		.p2-rocker{
+			animation: rubberBand 3s linear infinite;
+			z-index: 10;
+			@include Offset(p2-rocker,32,0,89,135);
+			transition: top .5s;
+		}
+		.p2-rocker-tip{
+			animation: pulse .7s linear infinite;
+			@include Offset(p2-rocker-tip1,120,-4,102,76);
+		}
+	}
+	.p2-activation-box{
+		@include Offset(null,null,null,750,111);
+		bottom: 2.5rem;
+		position: fixed;
+		ul{
+			@include Center(null,null,590,111);
+			margin-right: -1rem;
+		}
+		li{
+			float: left;
+			// @include Offset(null,null,null,90,90);
+		}
+		.activation-tableware{
+			transform:rotate(-45deg);
+			.tableware-icon{
+				@include Offset(null,-16,20,60,116);
+			}
+			.tableware-icon-animation{
+				animation: bounceIn 1s both;
+			}
+			.tableware-icon-ceramics{
+				background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/tablewareimg-ceramics.png);
+			}
+			.tableware-icon-silver{
+				background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/tablewareimg-silver.png);
+			}
+			.tableware-icon-wood{
+				background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/tablewareimg-wood.png);
+			}
+		}
+		.close{
+			animation: bounceIn 1s both .5s;
+			z-index: 5;
+			@include Offset(p2-close,-25,73,34,34);
+		}
+		.activation-item{
+			animation: bounceIn 1s both;
+			width: 2.25rem;
+			height:2.25rem;
+			margin-right: 0.5rem;
+			.food-icon{
+				img{
+					width:100%;
+				}
+				// @include Offset(food-cf,null,null,90,90);
+			}
+		}
+		// .activation-food2{
+		// 	animation: bounceIn 1s both;
+		// 	left: 5.925rem;
+		// 	.food-icon{
+		// 		@include Offset(food-rgm,null,null,90,90);
+		// 	}
+		// }
+		// .activation-food3{
+		// 	animation: bounceIn 1s both;
+		// 	left: 9.0rem;
+		// 	.food-icon{
+		// 		@include Offset(food-s-wsgyt,null,null,90,90);
+		// 	}
+		// }
+		// .activation-food4{
+		// 	animation: bounceIn 1s both;
+		// 	left: 12.15rem;
+		// 	.food-icon{
+		// 		@include Offset(food-s-qtdth,null,null,90,90);
+		// 	}
+		// }
+	}
+	.p2-btn{
+		animation: pulse 1.2s linear infinite;
+		z-index: 99;
+		@include Center(p2-btn,null,264,53);
+		bottom: 1rem;
+		position: fixed;
+	}
+}
+
+.loading2{
+	background-color: #262c4c;
+	z-index: 998;
+	@include Middle(loading,750,1809);
+	.loading-icon{
+		@include Center(loading-icon,590,210,80);
+		// background-size: 31.5rem 2.0rem;
+		width: 105px!important;
+		height: 40px!important;
+		margin-left: -54px!important;
+		background-size: 630px 40px;
+		animation: loading steps(6) 2.4s infinite;
+	}
+	.loading-text{
+		font-weight: bold;
+		text-align: center;
+		font-size: 15px;
+		color: #f9f3e7;
+		@include Offset(null,704,null,750,20);
+	}
+}
+
+.page3{
+	@include Middle(p3-background,750,1809);
+	.p3-title{
+		z-index: 6;
+		@include Center(p3-title,22,328,77);
+		position: fixed;
+	}
+	.p3-story{
+		z-index: 7;
+		@include Offset(p3-story,244,108,528,801);
+		display: -none;
+		animation: bounceInUp 1.5s both .8s;
+		.p3-story-logo{
+			@include Offset(null,44,44,124,68);
+			img{
+				width: 100%;
+			}
+		}
+		.p3-story-btn{
+			animation: pulse .8s linear infinite;
+			@include Offset(p3-story-btn1,34,444,52,52);
+		}
+		.p3-story-food{
+			@include Offset(null,70,128,274,274);
+			.food-s-hhj{
+				@include Offset(food-s-hhj,0,0,274,274);
+				display: none;
+			}
+			.food-s-hjbc{
+				@include Offset(food-s-hjbc,0,0,274,274);
+				display: none;
+			}
+			.food-s-hslxr{
+				@include Offset(food-s-hslxr,0,0,274,274);
+				display: none;
+			}
+			.food-s-jzym{
+				@include Offset(food-s-jzym,0,0,274,274);
+				display: none;
+			}
+			.food-s-qtdth{
+				@include Offset(food-s-qtdth,0,0,274,274);
+				display: none;
+			}
+			.food-s-sfjzs{
+				@include Offset(food-s-sfjzs,0,0,274,274);
+				display: none;
+			}
+			.food-s-tgjjrg{
+				@include Offset(food-s-tgjjrg,0,0,274,274);
+				display: none;
+			}
+			.food-s-wsgyt{
+				@include Offset(food-s-wsgyt,0,0,274,274);
+				display: none;
+			}
+			.food-s-xbmhlm{
+				@include Offset(food-s-xbmhlm,0,0,274,274);
+				display: none;
+			}
+			.food-s-xhky{
+				@include Offset(food-s-xhky,0,0,274,274);
+				display: none;
+			}
+			.food-s-ymdg{
+				@include Offset(food-s-ymdg,0,0,274,274);
+				display: none;
+			}
+		}
+		.p3-story-text{
+			@include Offset(null,380,44,441,328);
+			.story-food-s-hhj{
+				@include Offset(story-food-s-hhj,9,72,295,267);
+				display: none;
+			}
+			.story-food-s-hjbc{
+				@include Offset(story-food-s-hjbc,9,60,327,269);
+				display: none;
+			}
+			.story-food-s-hslxr{
+				@include Offset(story-food-s-hslxr,9,44,353,288);
+				display: none;
+			}
+			.story-food-s-jzym{
+				@include Offset(story-food-s-jzym,9,44,353,267);
+				display: none;
+			}
+			.story-food-s-qtdth{
+				@include Offset(story-food-s-qtdth,9,60,327,270);
+				display: none;
+			}
+			.story-food-s-sfjzs{
+				@include Offset(story-food-s-sfjzs,9,66,309,269);
+				display: none;
+			}
+			.story-food-s-tgjjrg{
+				@include Offset(story-food-s-tgjjrg,9,85,272,246);
+				display: none;
+			}
+			.story-food-s-wsgyt{
+				@include Offset(story-food-s-wsgyt,9,72,295,270);
+				display: none;
+			}
+			.story-food-s-xbmhlm{
+				@include Offset(story-food-s-xbmhlm,9,80,287,265);
+				display: none;
+			}
+			.story-food-s-xhky{
+				@include Offset(story-food-s-xhky,9,72,295,266);
+				display: none;
+			}
+			.story-food-s-ymdg{
+				@include Offset(story-food-s-ymdg1,9,66,309,283);
+				display: none;
+			}
+		}
+		.p3-story-tip{
+			animation: pulse 1s linear infinite;
+			@include Offset(p3-story-tip,735,120,289,22);
+		}
+	}
+	.story-animation{
+		animation: bounceOutDown 1s both;
+	}
+	.p3-save-box{
+		z-index: 6;
+		@include Offset(null,113,96,550,892);
+		opacity: 0;
+		img{
+			@include Offset(null,null,null,550,892);
+		}
+	}
+	.p3-result{
+		z-index: 5;
+		@include Center(p3-result,113,558,961);
+		animation: bounceInUp 1.5s both .5s;
+		// position: fixed;
+		.p3-name{
+			@include Offset(null,32,40,475,52);
+			color: #6f737a;
+			font-weight: bold;
+			font-size: 20px;
+		}
+		.p3-text{
+			@include Offset(p3-text,100,43,187,17);
+		}
+		.p3-bottomimg{
+			@include Offset(null,150,26,499,338);
+			img{
+				width: 100%;
+			}
+			.foodimg-big{
+				z-index: 5;
+				@include Offset(null,120,116,215,215);
+			}
+			.tablewareimg{
+				@include Offset(null,137,338,83,183);
+			}
+			.foodimg-1{
+				@include Offset(null,73,28,88,101);
+			}
+			.foodimg-2{
+				@include Offset(null,12,105,120,120);
+			}
+			.foodimg-3{
+				@include Offset(null,10,258,124,126);
+			}
+		}
+		.p3-bottomimg1{
+			background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/p3-bottomimg1.png);
+		}
+		.p3-bottomimg2{
+			background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/p3-bottomimg2.png);
+		}
+		.p3-bottomimg3{
+			background-image: url(https://img.xhangjia.com/h5/2018/10/foodie/p3-bottomimg3.png);
+		}
+		.p3-rim{
+			@include Offset(p3-rim,null,53,443,328);
+			bottom: 2.8rem;
+			.p3-lv1{
+				@include Offset(p3-lv1,13,70,299,275);
+				display: none;
+			}
+			.p3-lv2{
+				@include Offset(p3-lv2,13,77,286,266);
+				display: none;
+			}
+			.p3-lv3{
+				@include Offset(p3-lv3,13,75,297,283);
+				display: none;
+			}
+			.p3-lv4{
+				@include Offset(p3-lv4,13,68,311,275);
+				display: none;
+			}
+			.p3-lv5{
+				@include Offset(p3-lv5,13,76,293,283);
+				display: none;
+			}
+			.p3-lv6{
+				@include Offset(p3-lv6,13,67,313,279);
+				display: none;
+			}
+		}
+		.p3-result-tip{
+			animation: pulse 1s linear infinite;
+			@include Offset(p3-result-tip1,null,127,304,18);
+			bottom: 1.35rem;
+		}
+	}
+	.p3-balloon{
+		@include Offset(null,779,519,241,614);
+		.p3-balloon-purple{
+			animation: pulse 1.7s linear infinite;
+			@include Offset(p3-balloon-purple,null,4,248,622);
+		}
+		.p3-balloon-blue{
+			animation: pulse 1.8s linear infinite;
+			@include Offset(p3-balloon-blue,99,null,227,531);
+		}
+		.p3-balloon-orange{
+			animation: pulse 1.9s linear infinite;
+			@include Offset(p3-balloon-orange,312,10,204,302);
+		}
+	}
+	.p3-btn{
+		animation: pulse 1s linear infinite;
+		z-index: 99;
+		@include Center(p3-btn,null,217,44);
+		bottom: 1.925rem;
+		position: fixed;
+	}
+}
+
+// .reportcanvas{
+// 	width: 1px;
+// 	height: 1px;
+// 	overflow: hidden;
+// }

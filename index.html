@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>吃货鉴定所</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css?v=19">
+
+    <script type="text/javascript" >
+		var docEl = document.documentElement, Size = docEl.clientWidth / (750 / 40); 
+		docEl.style.fontSize = Size + 'px'; 
+		if(Size >= 25){ 
+			Size = 20;
+			docEl.style.fontSize = '20px';
+		}
+	</script>
+</head>
+<body>
+	<!-- 旋转屏幕提示代码 portrait [[ -->
+    <div id="orientation_hinter" class="landscape">
+        <div class="hinter_phone"><i></i></div>
+        <div class="hinter_rotate"></div>
+        <div class="hinter_text landscape">请切换手机竖屏模式</div>
+        <div class="hinter_text portrait">请切换手机横屏模式</div>
+    </div> 
+    <!-- 旋转屏幕提示代码 ]] -->
+
+	<!-- 开始loading -->
+    <div class="page loading" style="display: -none;">
+        <div class="loading-icon"></div>
+        <div class="loading-text">吃货鉴定所启动中...</div>
+    </div>
+
+
+    <div class="music">
+        <audio src="https://img.xhangjia.com/h5/2018/10/foodie/bgmusic.mp3" loop="loop" id="Music"></audio>
+        <div class="music-on"></div>
+    </div>
+	
+	
+	<div class="wrap">
+		<!-- 页面1 -->
+		<div class="page page1" style="display: none;">
+            <div class="pageinner">
+                <div class="balloon">
+                  <div class="balloon-purple"></div>
+                  <div class="balloon-purple2"></div>
+                  <div class="balloon-blue"></div>
+                  <div class="balloon-orange"></div>
+                </div>
+                <div class="people">
+                  <div class="people-EAT"></div>
+                  <div class="people-red Start"></div>
+                </div>
+                <div class="machine-box">
+                  <div class="machine"></div>
+                  <div class="light"></div>
+                  <div class="arrow Start"></div>
+                  <div class="rocker Start"></div>
+                </div>
+                <div class="cat"></div>
+                <div class="tip Start"></div>
+            </div>
+        </div>
+        <!-- 页面2 -->
+        <div class="page page2" style="display: none;">
+            <div class="pageinner">
+                <div class="p2-tip"></div>
+                <div class="p2-tableware">
+                  <ul>
+                    <li class="p2-tableware-ceramics" number="1" mode="">
+                      <div class="p2-tableware-inner"></div>
+                    </li>
+                    <li class="p2-tableware-silver" number="2" mode="">
+                      <div class="p2-tableware-inner"></div>
+                    </li>
+                    <li class="p2-tableware-wood" number="3" mode="">
+                      <div class="p2-tableware-inner"></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="p2-food-box">
+                  <ul>
+                    <li class="food-list star food-s-hhj" data-id="1">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-s-hhj.png" alt="">
+                        </div>
+                          <div class="food-listbg">
+                            <div class="food-name">· 黑嘿鸡</div>
+                            <div class="food-logo"></div>
+                            <div class="selection-box">
+                              <div class="selected"></div>
+                            </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list star food-s-hjbc" data-id="2">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-s-hjbc.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 花家白菜</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li> 
+
+                    <li class="food-list star food-s-hslxr" data-id="3">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-s-hslxr.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 黑松露虾仁</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list star food-s-jzym" data-id="4">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-s-jzym.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 浇汁莜面</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list star food-s-qtdth" data-id="5">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-s-qtdth.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 秋天的童话</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list star food-s-sfjzs" data-id="6">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-s-sfjzs.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 私房酱猪手</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list star food-s-tgjjrg" data-id="7">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-s-tgjjrg.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 唐宫金奖乳鸽</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list star food-s-wsgyt" data-id="8">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-s-wsgyt.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 旺顺阁鱼头</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list star food-s-xbmhlm" data-id="9">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-s-xbmhlm.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 西部马华拉面</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list star food-s-xhky" data-id="10">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-s-xhky.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 羲和烤鸭</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list star food-s-ymdg" data-id="11">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-s-ymdg.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 燕麦蛋糕</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list food-cf" data-id="12">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-cf.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 炒饭</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list food-chf" data-id="13">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-chf.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 炒河粉</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list food-gqmx" data-id="14">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-gqmx.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 过桥米线</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list food-hmj" data-id="15">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-hmj.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 黄焖鸡</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list food-kc" data-id="16">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-kc.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 烤串</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list food-klm" data-id="17">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-klm.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 烤冷面</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list food-krbf" data-id="18">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-krbf.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 烤肉拌饭</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list food-lp" data-id="19">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-lp.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 凉皮</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list food-rgm" data-id="20">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-rgm.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 三鲜面</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list food-rjm" data-id="21">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-rjm.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 肉夹馍</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list food-sjb" data-id="22">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-sjb.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 生煎包</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list food-slf" data-id="23">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-slf.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 酸辣粉</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list food-szb" data-id="24">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-szb.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 手抓饼</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list food-yxfs" data-id="25">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-yxfs.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 鸭血粉丝</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list food-zcbf" data-id="26">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-zcbf.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 紫菜包饭</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="food-list food-zjp" data-id="27">
+                      <div class="food-list-inner">
+                        <div class="food-icon">
+                          <img src="https://img.xhangjia.com/h5/2018/10/foodie/food-zjp.png" alt="">
+                        </div>
+                        <div class="food-listbg">
+                          <div class="food-name">· 炸鸡排</div>
+                          <div class="food-logo"></div>
+                          <div class="selection-box">
+                            <div class="selected"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li> 
+                  </ul>
+                </div>
+
+                <div class="p2-rocker-box">
+                  <div class="p2-rocker" data-number="4"></div>
+                  <div class="p2-rocker-tip"></div>
+                </div>
+    
+                <div class="p2-activation-box">
+                  <ul>
+                    <li class="activation-tableware activation-item" pid="">
+                      <div class="tableware-icon"></div>
+                    </li>
+                    <!-- <li class="activation-item">
+                      <div class="close"></div>
+                      <div class="food-icon"><img src="https://img.xhangjia.com/h5/2018/10/foodie/food-cf.png" alt=""></div>
+                    </li> -->
+                    <!-- <li class="activation-item activation-food2">
+                      <div class="close"></div>
+                      <div class="food-icon"></div>
+                    </li>
+                    <li class="activation-item activation-food3">
+                      <div class="close"></div>
+                      <div class="food-icon"></div>
+                    </li>
+                    <li class="activation-item activation-food4">
+                      <div class="close"></div>
+                      <div class="food-icon"></div>
+                    </li> -->
+                  </ul>
+                </div>
+                
+
+                <div class="p2-btn" id="Done"></div>
+            </div>
+        </div>
+        <!-- 生成页loading -->
+        <div class="page loading2" style="display: none;">
+            <div class="loading-icon"></div>
+            <div class="loading-text">鉴定报告即将呈现...</div>
+        </div>
+        <!-- 页面3 -->
+        <div class="page page3" style="display: none;">
+            <div class="pageinner">
+                <div class="p3-title"></div>
+                <div class="p3-story" style="display:none;">
+                  <div class="p3-story-logo">
+                    <img src="" alt="">
+                  </div>
+                  <div class="p3-story-btn" id="Close"></div>
+                  <div class="p3-story-food">
+                    <div class="sf_icon_item food-s-hhj" data-id="1"></div>
+                    <div class="sf_icon_item food-s-hjbc" data-id="2"></div>
+                    <div class="sf_icon_item food-s-hslxr" data-id="3"></div>
+                    <div class="sf_icon_item food-s-jzym" data-id="4"></div>
+                    <div class="sf_icon_item food-s-qtdth" data-id="5"></div>
+                    <div class="sf_icon_item food-s-sfjzs" data-id="6"></div>
+                    <div class="sf_icon_item food-s-tgjjrg" data-id="7"></div>
+                    <div class="sf_icon_item food-s-wsgyt" data-id="8"></div>
+                    <div class="sf_icon_item food-s-xbmhlm" data-id="9"></div>
+                    <div class="sf_icon_item food-s-xhky" data-id="10"></div>
+                    <div class="sf_icon_item food-s-ymdg" data-id="11"></div>
+                  </div>
+                  <div class="p3-story-text">
+                    <div class="sf_text_item story-food-s-hhj" data-id="1"></div>
+                    <div class="sf_text_item story-food-s-hjbc" data-id="2"></div>
+                    <div class="sf_text_item story-food-s-hslxr" data-id="3"></div>
+                    <div class="sf_text_item story-food-s-jzym" data-id="4"></div>
+                    <div class="sf_text_item story-food-s-qtdth" data-id="5"></div>
+                    <div class="sf_text_item story-food-s-sfjzs" data-id="6"></div>
+                    <div class="sf_text_item story-food-s-tgjjrg" data-id="7"></div>
+                    <div class="sf_text_item story-food-s-wsgyt" data-id="8"></div>
+                    <div class="sf_text_item story-food-s-xbmhlm" data-id="9"></div>
+                    <div class="sf_text_item story-food-s-xhky" data-id="10"></div>
+                    <div class="sf_text_item story-food-s-ymdg" data-id="11"></div>
+                  </div>
+                  <div class="p3-story-tip" id="Close2"></div>
+                </div>
+                <div class="p3-save-box">
+                  <img src="" id="ReportImg">
+                </div>
+                <div class="p3-result">
+                  <div class="p3-name">HI,<b id="UserName">小狗熊</b></div>
+                  <div class="p3-text"></div>
+                  <div class="p3-bottomimg">
+                    <div class="fr_item foodimg-big">
+                      <img src="" alt="">
+                    </div>
+                    <div class="tablewareimg">
+                      <img src="" alt="">
+                    </div>
+                    <div class="fr_small_item fr_item foodimg-1">
+                      <img src="" alt="">
+                    </div>
+                    <div class="fr_small_item fr_item foodimg-2">
+                      <img src="" alt="">
+                    </div>
+                    <div class="fr_small_item fr_item foodimg-3">
+                      <img src="" alt="">
+                    </div>
+                  </div>
+                  <div class="p3-rim">
+                    <div class="p3-lv1"></div>
+                    <div class="p3-lv2"></div>
+                    <div class="p3-lv3"></div>
+                    <div class="p3-lv4"></div>
+                    <div class="p3-lv5"></div>
+                    <div class="p3-lv6"></div>
+                  </div>
+                  <div class="p3-result-tip"></div>
+                </div>
+                <div class="p3-balloon">
+                  <div class="p3-balloon-purple"></div>
+                  <div class="p3-balloon-blue"></div>
+                  <div class="p3-balloon-orange"></div>
+                </div>
+                <div class="p3-btn" id="Reset"></div>
+            </div>
+        </div>
+        <div class="imgcanvas" id="container"></div>
+	</div>
+<script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="script/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="script/spritejs.min.js"></script>
+<script type="text/javascript" src="js/index.js?v=18"></script>
+<script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?29fe37985b5cd2a341e821b85502b2fe";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vConsole/3.2.0/vconsole.min.js"></script>
+<script>
+    var vConsole = new VConsole();
+</script>  -->
+
+</body>
+</html>
